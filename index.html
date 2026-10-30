@@ -314,7 +314,7 @@
         }
 
         function processBlobResult(blob, isShare) {
-            const file = new File([blob], "Digital-Diya-Greeting.jpg", { type: "image/jpeg" });
+            const file = new File([blob], "Digital-Diya-Greeting.png", { type: "image/png" });
             if (isShare && navigator.canShare && navigator.canShare({ files: [file] })) {
                 navigator.share({
                     title: 'Digital Diya Diwali Greeting',
@@ -325,7 +325,7 @@
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = 'Digital-Diya-Greeting.jpg';
+                a.download = 'Digital-Diya-Greeting.png';
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
@@ -336,8 +336,8 @@
 
         function fallbackDirectDownload(isShare) {
             const a = document.createElement('a');
-            a.href = "Digital Diya Greeting.jpg";
-            a.download = 'Digital-Diya-Greeting.jpg';
+            a.href = "Digital Diya Greeting.png";
+            a.download = 'Digital-Diya-Greeting.png';
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
